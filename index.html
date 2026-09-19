@@ -1002,7 +1002,6 @@ if (!handlingBack) {
         "#lyrics"
     );
 }
-
 }
       function showToast(message) {
     let toast = document.getElementById("toast");
@@ -1308,22 +1307,14 @@ window.addEventListener("popstate", function (event) {
     }
     handlingBack = false;
 });
-
-
 // Register Service Worker
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-        navigator.serviceWorker.register("./sw.js");
-    });
-}
-</script>
-
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
         navigator.serviceWorker.register("./service-worker.js");
     });
 }
+  }
 </script>
 </body>
-
 </html>
+
